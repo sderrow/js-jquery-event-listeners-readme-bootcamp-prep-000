@@ -12,6 +12,21 @@ function frameIt() {
   })
 }
 
+function pressIt() {
+  $("input").on("keydown", function(e) {
+    const key = parseInt(e.detail || e.which);
+    if (key === 71) {
+      alert("You pressed the 'G' key!")
+    }
+  })
+}
+
+function submitIt() {
+  $("form").on("submit", function() {
+    alert("Your form will be submitted now")
+  })
+}
+
 $(document).ready(function(){
 
 // call functions here
